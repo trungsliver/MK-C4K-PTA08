@@ -40,10 +40,37 @@ class Rectangle:
     def dtich(self):
         return self.a * self.b
 
-hcn1 = Rectangle(5, 2)
-hcn2 = Rectangle(10, 3)
-print('Chu vi HCN1:', hcn1.cvi())
-print('Diện tích HCN1:', hcn1.dtich())
-print('Chu vi HCN2:', hcn2.cvi())
-print('Diện tích HCN2:', hcn2.dtich())
+# hcn1 = Rectangle(5, 2)
+# hcn2 = Rectangle(10, 3)
+# print('Chu vi HCN1:', hcn1.cvi())
+# print('Diện tích HCN1:', hcn1.dtich())
+# print('Chu vi HCN2:', hcn2.cvi())
+# print('Diện tích HCN2:', hcn2.dtich())
     
+# Bài tập 1: class BankAccount với các thuộc tính account_number và balance. 
+    # Sử dụng các phương thức deposit() - nạp và withdraw() - rút để cập nhật số dư.
+class BankAccount():
+    def __init__(self, account_number, balance=0):
+        self.account_number = account_number
+        self.balance = balance
+        
+    # Phương thức nạp tiền
+    def deposit(self, amount):
+        if amount > 0:
+            self.balance += amount
+            print(f'Tài khoản {self.account_number} đã nạp {amount} VND thành công')
+        else:
+            print('Số tiền nạp không hợp lệ')
+                
+    # Phương thức rút tiền
+    def withdraw(self, amount):
+        if 0 < amount <= self.balance:
+            self.balance -= amount
+            print(f'Tài khoản {self.account_number} đã rút {amount} VND thành công')
+        else:
+            print('Số tiền rút không hợp lệ')
+
+acc1 = BankAccount('16102011')
+acc1.deposit(50)
+acc1.withdraw(50)
+print('hello')
