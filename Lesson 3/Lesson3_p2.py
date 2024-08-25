@@ -1,7 +1,7 @@
 from Lesson3_p1 import Human, Animal
 from Lesson3_p1 import Student, Dog
 
-# stu1 = Student('Khang Anh', 12, 'rainbow', 'FPT School')
+# stu1 = Student('Khang Anh', 12, 'male', 'FPT School')
 # stu1.introduce()
 # stu2 = Student('Tu', 13, 'male', 'Vin')
 # stu2.introduce()
