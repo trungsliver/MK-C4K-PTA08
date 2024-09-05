@@ -27,8 +27,8 @@
 # print(7%3)
 # print(7//3) 
 
-number = int(input('Nhập 1 số nguyên: '))
-if number % 2 == 0:
-    print(number, 'là số chẵn')
-else:
-    print(number, 'là số lẻ')
+# number = int(input('Nhập 1 số nguyên: '))
+# if number % 2 == 0:
+#     print(number, 'là số chẵn')
+# else:
+#     print(number, 'là số lẻ')
