@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="image">
+    <file>images/mindx_banner.jpg</file>
+    <file>images/mindx_logo.jpg</file>
+  </qresource>
+</RCC>
