@@ -22,7 +22,7 @@ def login_w():
     global ui
     ui = login.Ui_MainWindow()
     ui.setupUi(MainWindow)
-    # ui.btn_signup.clicked.connect(signup_check)
+    ui.btn_signup.clicked.connect(login_check)
     MainWindow.show()
 
 def signup_check():
@@ -56,6 +56,22 @@ def signup_check():
         print(users)
         login_w()
 
+def login_check():
+    check = False
+    username = ui.lineEdit_email.text().strip()
+    password = ui.lineEdit_password.text().strip()
+    # Kiểm tra 
+    for user in users:
+        stored_username, stored_password = user.split(':', 1)
+        if username == stored_username and password == stored_password:
+            check = True
+    
+    if check == True:
+        msg_box('Login success', 'Welcome to my app !!!')
+        homeUi()
+    else:
+        msg_box('Login fail', 'Username or password is incorrect!')
+    
 
 
 def msg_box(title, content):
